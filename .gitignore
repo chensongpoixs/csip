@@ -11,7 +11,7 @@ local.properties
 # Android Studio generated files and folders
 captures/
 .externalNativeBuild/
-.cxx/
+#.cxx/
 *.apk
 output.json
 
@@ -31,3 +31,11 @@ google-services.json
 
 # Android Profiling
 *.hprof
+/sip/.vs
+/sip/client/client.vcxproj.user
+/sip/server/server.vcxproj.user
+/sip/client/x64
+/sip/server/x64
+/sip/bin
+/sip/vsout
+/sip/x64
