@@ -148,7 +148,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="csip_msg_dispatch.cpp" />
+    <ClCompile Include="csip_server.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="csafe_queue.h" />
+    <ClInclude Include="csip_event.h" />
+    <ClInclude Include="csip_msg_dispatch.h" />
+    <ClInclude Include="csip_server.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
