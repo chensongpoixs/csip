@@ -1,8 +1,5 @@
 ﻿
-
-
-#ifndef _C_SAFE_QUEUE_H_
-#define _C_SAFE_QUEUE_H_
+ 
 #include <mutex>
 
 #include <queue>
@@ -18,36 +15,7 @@ namespace chen {
 
 
 
-	template<typename T>
-	class csafe_queue
-	{
-	private:
-		typedef std::mutex							clock_type;
-		typedef std::lock_guard<clock_type>			clock_guard;
-	public:
-		csafe_queue() = default;
-		~csafe_queue() = default;
-		void push(const T&  t)
-		{
-			clock_guard lock(m_lock);
-			m_queue.push(t);
-		}
-
-		bool pop(T& out)
-		{
-			clock_guard lock(m_lock);
-			if (m_queue.empty())
-			{
-				return false;
-			}
-			out = m_queue.front();
-			m_queue.pop();
-			return true;
-		}
-	private:
-		clock_type					m_lock;
-		std::queue<T>				m_queue;
-	};
+ 
 	bool csip_server::init()
 	{
 
@@ -71,7 +39,7 @@ namespace chen {
 	bool csip_server::startup(const std::string& user_agent)
 	{
 		m_sip_host = "192.168.0.191";
-		m_sip_port = 5566;
+		m_sip_port = 8188;
 		int32_t ret = ::eXosip_listen_addr(m_sip_context_ptr, IPPROTO_UDP, m_sip_host.c_str(), m_sip_port, AF_INET, 0);
 		if (ret != 0)
 		{
@@ -90,6 +58,9 @@ namespace chen {
 
 		return false;
 	}
+	void csip_server::update(uint32_t DateTime)
+	{
+	}
 	void csip_server::destroy()
 	{
 		if (m_recv_thread.joinable())
@@ -106,7 +77,7 @@ namespace chen {
 			m_sip_context_ptr = NULL;
 		}
 	}
-	csip_event_t* csip_server::_new_event(eXosip_event_t* exosip_event)
+	  csip_event_t* csip_server::_new_event(eXosip_event_t* exosip_event)
 	{
 
 		if (exosip_event == nullptr)
@@ -118,7 +89,7 @@ namespace chen {
 			return nullptr;
 		}
 
-		csip_event_t* sip_event_ptr = new csip_event_t();
+		struct csip_event_t* sip_event_ptr = new struct csip_event_t();
 		//sip_event_sptr event(new sip_event_t);// = std::make_shared(SipEvent)();
 	//	CEventHandlerManager::EventNameProcPair pair = m_eventHandle.GetEventProc(exosip_event->type);
 		/*if (pair.name == nullptr)
@@ -197,15 +168,13 @@ namespace chen {
 			eXosip_event_free(sipg_event->exevent);
 			delete sipg_event;
 			sipg_event = NULL;
-			return;
+			return 0;
 		}
 		++handler_ptr->handle_count;
-		(g_sip_msg_dispatch.*(handler_ptr->handler)) (sipg_event);
+		(g_sip_msg_dispatch.*(handler_ptr->handler)) ((const csip_event_t*&)sipg_event);
 		eXosip_event_free(sipg_event->exevent);
 		delete sipg_event;
 		sipg_event = NULL;
 		return 0;
 	}
-}
-
-#endif // _C_SAFE_QUEUE_H_
+} 

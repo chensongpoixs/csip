@@ -148,6 +148,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="csip_handler.cpp" />
     <ClCompile Include="csip_msg_dispatch.cpp" />
     <ClCompile Include="csip_server.cpp" />
     <ClCompile Include="main.cpp" />

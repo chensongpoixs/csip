@@ -1,0 +1,21 @@
+[submodule "deps/cpp-infra"]
+	path = deps/cpp-infra
+	url = https://github.com/VITObelgium/cpp-infra.git
+[submodule "deps/date"]
+	path = deps/date
+	url = https://github.com/HowardHinnant/date.git
+[submodule "deps/fmt"]
+	path = deps/fmt
+	url = https://github.com/fmtlib/fmt.git
+[submodule "deps/gsl"]
+	path = deps/gsl
+	url = https://github.com/microsoft/GSL.git
+[submodule "deps/jsoncpp"]
+	path = deps/jsoncpp
+	url = https://github.com/open-source-parsers/jsoncpp.git
+[submodule "deps/yaml-cpp"]
+	path = deps/yaml-cpp
+	url = https://github.com/jbeder/yaml-cpp.git
+[submodule "deps/StreamResolver"]
+	path = deps/StreamResolver
+	url = https://github.com/Zi-lu/StreamResolver.git

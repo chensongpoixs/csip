@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="h26x_defs.hpp" />
+    <ClInclude Include="h26x_parser.hpp" />
+    <ClInclude Include="ps_def.hpp" />
+    <ClInclude Include="ps_demux.hpp" />
+    <ClInclude Include="rtp_defs.hpp" />
+    <ClInclude Include="rtp_demux.hpp" />
+    <ClInclude Include="rtp_header.hpp" />
+    <ClInclude Include="H264ParseSPS.h">
+      <Filter>h264x</Filter>
+    </ClInclude>
+    <ClInclude Include="H265ParseSPS.hpp">
+      <Filter>h264x</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaBuffer.h">
+      <Filter>h264x</Filter>
+    </ClInclude>
+    <ClInclude Include="pes.hpp">
+      <Filter>ps</Filter>
+    </ClInclude>
+    <ClInclude Include="ps_common.hpp">
+      <Filter>ps</Filter>
+    </ClInclude>
+    <ClInclude Include="timestamps.hpp">
+      <Filter>ps</Filter>
+    </ClInclude>
+    <ClInclude Include="rtp_common.hpp">
+      <Filter>rtp</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="h264x">
+      <UniqueIdentifier>{596ec5da-7e68-469b-9fc9-3958f2f809d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ps">
+      <UniqueIdentifier>{10bd5f28-63c0-4c88-9318-9d88431beb5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rtp">
+      <UniqueIdentifier>{0688de2b-cf20-477a-b36c-59cbd20ae73a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="h26x_parser.cpp">
+      <Filter>h264x</Filter>
+    </ClCompile>
+    <ClCompile Include="H264ParseSPS.cpp">
+      <Filter>h264x</Filter>
+    </ClCompile>
+    <ClCompile Include="H265ParseSPS.cpp">
+      <Filter>h264x</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaBuffer.cpp">
+      <Filter>h264x</Filter>
+    </ClCompile>
+    <ClCompile Include="ps_demux.cpp">
+      <Filter>ps</Filter>
+    </ClCompile>
+    <ClCompile Include="rtp_demux.cpp">
+      <Filter>rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="rtp_header.cpp">
+      <Filter>rtp</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

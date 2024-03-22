@@ -10,7 +10,7 @@
 #include "csip_msg_dispatch.h"
 namespace chen {
 
-    struct csip_event_t
+    typedef struct csip_event_t
     {
         int                 value;
         eXosip_event_type_t     sip_msg_id;
@@ -20,8 +20,8 @@ namespace chen {
         eXosip_event_t* exevent;
         uint64_t            id;
 
-        csip_event_t() /*= default*/ {}
-    };
+      //  csip_event_t() /*= default*/ {}
+    } ;
    // typedef std::function<int32_t (const csip_event_t*&)> event_proc;
 
 }

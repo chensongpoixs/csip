@@ -13,7 +13,7 @@
 
 
 namespace chen {
-
+	 
 	class csip_server
 	{
 	public:
@@ -39,7 +39,7 @@ namespace chen {
 	private:
 
 
-		csip_event_t* _new_event(eXosip_event_t* exosip_event);
+		  csip_event_t* _new_event(eXosip_event_t* exosip_event);
 	private:
 
 		int32_t _sip_recv_events();
@@ -50,7 +50,7 @@ namespace chen {
 		std::string				m_sip_id;
 		std::string				m_sip_host;
 		eXosip_t*				m_sip_context_ptr;
-		csafe_queue<csip_event_t*>  m_event_queue;
+		csafe_queue< csip_event_t*>  m_event_queue;
 		
 
 
@@ -62,4 +62,4 @@ namespace chen {
 	 
 }
 
-#endif // _C_SAFE_QUEUE_H_
+#endif // _C_SIP_SERVER_H_

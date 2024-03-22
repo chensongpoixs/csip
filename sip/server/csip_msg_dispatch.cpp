@@ -24,6 +24,7 @@
 
 
 namespace chen {
+	csip_msg_dispatch g_sip_msg_dispatch;
 	csip_msg_dispatch::csip_msg_dispatch()
 	{
 	}
@@ -111,7 +112,7 @@ namespace chen {
 		if ( m_msg_handler[sip_event_id].handler && sip_event_id >  EXOSIP_EVENT_COUNT)
 		{
 			printf("[%s] register msg error, msg_id = %u, msg_name = %s", __FUNCTION__, sip_event_id, msg_name.c_str());
-			return;
+			return false;
 		}
 		m_msg_handler[sip_event_id].msg_name = msg_name;//   数据统计
 		m_msg_handler[sip_event_id].handle_count = 0;

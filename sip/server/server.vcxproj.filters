@@ -8,6 +8,9 @@
     <ClCompile Include="csip_msg_dispatch.cpp">
       <Filter>sip_msg_dispatch</Filter>
     </ClCompile>
+    <ClCompile Include="csip_handler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="server">
@@ -21,6 +24,9 @@
     </Filter>
     <Filter Include="sip_msg_dispatch">
       <UniqueIdentifier>{7282381a-117d-4965-8cff-947a943f69ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="handler">
+      <UniqueIdentifier>{7d4a1367-278c-4db9-aa38-d0fc55093ab6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

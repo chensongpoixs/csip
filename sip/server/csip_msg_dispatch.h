@@ -29,11 +29,14 @@
 #include "eXosip2/eXosip.h"
 #include <unordered_map>
 #include "csip_server.h"
+
 #include <map>
 #include <atomic>
 namespace chen {
-
+	struct csip_event_t;
 	class csip_msg_dispatch;
+
+	
 	typedef int32_t (csip_msg_dispatch::*handler_sip_type)(const csip_event_t*&   event);
 #pragma pack(push, 4)
 	struct csip_msg_handler

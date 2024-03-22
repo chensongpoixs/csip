@@ -39,3 +39,6 @@ google-services.json
 /sip/bin
 /sip/vsout
 /sip/x64
+/sip/sip_media_server/sip_media_server.vcxproj.user
+/sip/stream_resolver/stream_resolver.vcxproj.user
+/sip/lib
