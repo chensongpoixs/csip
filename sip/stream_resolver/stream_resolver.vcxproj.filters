@@ -29,6 +29,24 @@
     <ClInclude Include="rtp_common.hpp">
       <Filter>rtp</Filter>
     </ClInclude>
+    <ClInclude Include="mutex.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="print_log.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="thread.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_pool.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="time.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>util</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="h264x">
@@ -39,6 +57,9 @@
     </Filter>
     <Filter Include="rtp">
       <UniqueIdentifier>{0688de2b-cf20-477a-b36c-59cbd20ae73a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{813ffaee-297e-44b4-9655-aaff56d6ce3b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +83,24 @@
     </ClCompile>
     <ClCompile Include="rtp_header.cpp">
       <Filter>rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="mutex.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="print_log.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="thread.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_pool.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="time.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>util</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

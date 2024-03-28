@@ -80,13 +80,13 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\lib\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)..\vsout\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <IncludePath>$(SolutionDir)..\deps\deps/cpp-infra/include;$(IncludePath)</IncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>..\lib\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)..\vsout\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <IncludePath>$(SolutionDir)..\deps\deps/cpp-infra/include;$(IncludePath)</IncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -150,7 +150,9 @@
     <ClInclude Include="h26x_defs.hpp" />
     <ClInclude Include="h26x_parser.hpp" />
     <ClInclude Include="MediaBuffer.h" />
+    <ClInclude Include="mutex.h" />
     <ClInclude Include="pes.hpp" />
+    <ClInclude Include="print_log.h" />
     <ClInclude Include="ps_common.hpp" />
     <ClInclude Include="ps_def.hpp" />
     <ClInclude Include="ps_demux.hpp" />
@@ -158,6 +160,10 @@
     <ClInclude Include="rtp_defs.hpp" />
     <ClInclude Include="rtp_demux.hpp" />
     <ClInclude Include="rtp_header.hpp" />
+    <ClInclude Include="thread.h" />
+    <ClInclude Include="thread_pool.h" />
+    <ClInclude Include="time.hpp" />
+    <ClInclude Include="timer.h" />
     <ClInclude Include="timestamps.hpp" />
   </ItemGroup>
   <ItemGroup>
@@ -165,9 +171,15 @@
     <ClCompile Include="H265ParseSPS.cpp" />
     <ClCompile Include="h26x_parser.cpp" />
     <ClCompile Include="MediaBuffer.cpp" />
+    <ClCompile Include="mutex.cpp" />
+    <ClCompile Include="print_log.cpp" />
     <ClCompile Include="ps_demux.cpp" />
     <ClCompile Include="rtp_demux.cpp" />
     <ClCompile Include="rtp_header.cpp" />
+    <ClCompile Include="thread.cpp" />
+    <ClCompile Include="thread_pool.cpp" />
+    <ClCompile Include="time.cpp" />
+    <ClCompile Include="timer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

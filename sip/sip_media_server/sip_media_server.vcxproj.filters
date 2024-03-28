@@ -2,5 +2,209 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="config_manager.cpp" />
+    <ClCompile Include="common.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml2.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="ptz_parser.cpp">
+      <Filter>utils\ptz</Filter>
+    </ClCompile>
+    <ClCompile Include="media_transpond.cpp">
+      <Filter>media_transpond</Filter>
+    </ClCompile>
+    <ClCompile Include="session_manager.cpp">
+      <Filter>media_transpond</Filter>
+    </ClCompile>
+    <ClCompile Include="gb28181_svr_manager.cpp">
+      <Filter>gb_service</Filter>
+    </ClCompile>
+    <ClCompile Include="sip_server.cpp">
+      <Filter>gb_service</Filter>
+    </ClCompile>
+    <ClCompile Include="base_request.cpp">
+      <Filter>gb_service\request_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="message_request.cpp">
+      <Filter>gb_service\request_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="request_manager.cpp">
+      <Filter>gb_service\request_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="request_sender.cpp">
+      <Filter>gb_service\manscdp</Filter>
+    </ClCompile>
+    <ClCompile Include="xml_assembly.cpp">
+      <Filter>gb_service\manscdp</Filter>
+    </ClCompile>
+    <ClCompile Include="xml_parser.cpp">
+      <Filter>gb_service\manscdp</Filter>
+    </ClCompile>
+    <ClCompile Include="base_handler.cpp">
+      <Filter>gb_service\event_handler</Filter>
+    </ClCompile>
+    <ClCompile Include="call_handler.cpp">
+      <Filter>gb_service\event_handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler_manager.cpp">
+      <Filter>gb_service\event_handler</Filter>
+    </ClCompile>
+    <ClCompile Include="message_handler.cpp">
+      <Filter>gb_service\event_handler</Filter>
+    </ClCompile>
+    <ClCompile Include="register_handler.cpp">
+      <Filter>gb_service\event_handler</Filter>
+    </ClCompile>
+    <ClCompile Include="subscribe_handler.cpp">
+      <Filter>gb_service\event_handler</Filter>
+    </ClCompile>
+    <ClCompile Include="sdp.cpp">
+      <Filter>gb_service\event_handler\sdp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config_manager.h" />
+    <ClInclude Include="common.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="safe_queue.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml.hpp">
+      <Filter>utils\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml_iterators.hpp">
+      <Filter>utils\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml_print.hpp">
+      <Filter>utils\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml_utils.hpp">
+      <Filter>utils\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="defs.h">
+      <Filter>utils\ptz</Filter>
+    </ClInclude>
+    <ClInclude Include="ptz_parser.h">
+      <Filter>utils\ptz</Filter>
+    </ClInclude>
+    <ClInclude Include="media_transpond.h">
+      <Filter>media_transpond</Filter>
+    </ClInclude>
+    <ClInclude Include="media_transpond_defs.h">
+      <Filter>media_transpond</Filter>
+    </ClInclude>
+    <ClInclude Include="session_manager.h">
+      <Filter>media_transpond</Filter>
+    </ClInclude>
+    <ClInclude Include="gb_service_defs.h">
+      <Filter>gb_service</Filter>
+    </ClInclude>
+    <ClInclude Include="gb28181_svr_manager.h">
+      <Filter>gb_service</Filter>
+    </ClInclude>
+    <ClInclude Include="sip_server.h">
+      <Filter>gb_service</Filter>
+    </ClInclude>
+    <ClInclude Include="base_request.h">
+      <Filter>gb_service\request_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="message_request.h">
+      <Filter>gb_service\request_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="request_manager.h">
+      <Filter>gb_service\request_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="request_manager_defs.h">
+      <Filter>gb_service\request_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="request_sender.h">
+      <Filter>gb_service\manscdp</Filter>
+    </ClInclude>
+    <ClInclude Include="xml_assembly.h">
+      <Filter>gb_service\manscdp</Filter>
+    </ClInclude>
+    <ClInclude Include="xml_parser.h">
+      <Filter>gb_service\manscdp</Filter>
+    </ClInclude>
+    <ClInclude Include="common_defs.h">
+      <Filter>gb_service\manscdp\defs</Filter>
+    </ClInclude>
+    <ClInclude Include="control_defs.h">
+      <Filter>gb_service\manscdp\defs</Filter>
+    </ClInclude>
+    <ClInclude Include="manscdp_defs.h">
+      <Filter>gb_service\manscdp\defs</Filter>
+    </ClInclude>
+    <ClInclude Include="notify_defs.h">
+      <Filter>gb_service\manscdp\defs</Filter>
+    </ClInclude>
+    <ClInclude Include="query_defs.h">
+      <Filter>gb_service\manscdp\defs</Filter>
+    </ClInclude>
+    <ClInclude Include="types.h">
+      <Filter>gb_service\manscdp\defs</Filter>
+    </ClInclude>
+    <ClInclude Include="base_handler.h">
+      <Filter>gb_service\event_handler</Filter>
+    </ClInclude>
+    <ClInclude Include="call_handler.h">
+      <Filter>gb_service\event_handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler_manager.h">
+      <Filter>gb_service\event_handler</Filter>
+    </ClInclude>
+    <ClInclude Include="message_handler.h">
+      <Filter>gb_service\event_handler</Filter>
+    </ClInclude>
+    <ClInclude Include="register_handler.h">
+      <Filter>gb_service\event_handler</Filter>
+    </ClInclude>
+    <ClInclude Include="subscribe_handler.h">
+      <Filter>gb_service\event_handler</Filter>
+    </ClInclude>
+    <ClInclude Include="call_defs.h">
+      <Filter>gb_service\event_handler\sdp</Filter>
+    </ClInclude>
+    <ClInclude Include="sdp.h">
+      <Filter>gb_service\event_handler\sdp</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml2.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{b479a9ad-bd09-48c0-9295-fcb949954292}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\rapidxml">
+      <UniqueIdentifier>{664a999e-b688-497d-83eb-ddc3be25490a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\ptz">
+      <UniqueIdentifier>{3b40deda-ce04-49cb-ab21-5e08b7eae514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="media_transpond">
+      <UniqueIdentifier>{40e36e01-cc00-4389-b9b1-03002496c297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gb_service">
+      <UniqueIdentifier>{4139c262-d2fb-4383-8a8a-12240c41552b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gb_service\manscdp">
+      <UniqueIdentifier>{a3b2b26b-d492-44b1-b02b-c70dc4b3c24e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gb_service\manscdp\defs">
+      <UniqueIdentifier>{acd520e8-c653-4ede-aa23-94135d1681a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gb_service\event_handler">
+      <UniqueIdentifier>{72bd939b-155a-4422-96c2-4c43ec5adc0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gb_service\request_manager">
+      <UniqueIdentifier>{b25e87a2-cd89-4d5f-a89b-e0c0eed62d7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gb_service\event_handler\sdp">
+      <UniqueIdentifier>{6d410e8f-382c-40a8-afa7-f942f1cb55a3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

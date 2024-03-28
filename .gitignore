@@ -42,3 +42,13 @@ google-services.json
 /sip/sip_media_server/sip_media_server.vcxproj.user
 /sip/stream_resolver/stream_resolver.vcxproj.user
 /sip/lib
+/deps/libsip/exosip/platform/vsnet/.vs
+/deps/libsip/exosip/platform/vsnet/eXosip
+/deps/libsip/exosip/platform/vsnet/libcares
+/deps/libsip/exosip/platform/vsnet/v142
+/deps/libsip/osip/platform/vsnet/v142
+/deps/libsip/osip/platform/vsnet/.vs
+/deps/libsip/osip/platform/vsnet/osip2
+/deps/libsip/osip/platform/vsnet/osipparser2
+/deps/libsip/osip/platform/vsnet/osipparser2.vcxproj.user
+/deps/libsip/osip/platform/vsnet/osip2.vcxproj.user

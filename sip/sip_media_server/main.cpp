@@ -6,10 +6,10 @@
 **	Modify		: 2020/2/27		zhangqiang		Create the file
 **	********************************************************************************
 */
-#include "gb_service/gb28181_svr_manager.h"
+#include "gb28181_svr_manager.h"
 #include "config_manager.h"
-#include "Infra/ThreadPool.h"
-#include "Infra/PrintLog.h"
+#include "thread_pool.h"
+#include "print_log.h"
 using namespace Zilu;
 using namespace Protocol;
 

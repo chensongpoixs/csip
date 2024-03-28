@@ -80,14 +80,14 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)..\vsout\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <IncludePath>..\stream_resolver;$(SolutionDir)..\deps\deps/cpp-infra/include;$(SolutionDir)..\deps\deps/libsip/include;$(SolutionDir)..\deps\deps/yaml-cpp/include;$(SolutionDir)..\deps\deps/jsoncpp/include;$(SolutionDir)..\deps\deps/gsl/include;$(SolutionDir)..\deps\deps/fmt/include;$(SolutionDir)..\deps\deps/date/include;$(IncludePath)</IncludePath>
+    <IncludePath>..\stream_resolver;$(SolutionDir)..\deps\deps/libsip/include;$(SolutionDir)..\deps\deps/yaml-cpp/include;$(SolutionDir)..\deps\deps/jsoncpp/include;$(IncludePath)</IncludePath>
     <LibraryPath>..\lib\$(Platform)\$(Configuration)\;$(SolutionDir)..\deps\deps\yaml-cpp\lib\x64\debug;$(SolutionDir)..\deps\deps\libsip\lib\x64\debug;$(SolutionDir)..\deps\deps\jsoncpp\lib\x64\debug;$(SolutionDir)..\deps\deps\gsl\lib\x64\debug;$(SolutionDir)..\deps\deps\fmt\lib\x64\debug;$(SolutionDir)..\deps\deps\date\lib\x64\debug;$(SolutionDir)..\deps\deps\cpp-infra\lib\x64\debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)..\vsout\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <IncludePath>..\stream_resolver;$(SolutionDir)..\deps\deps/cpp-infra/include;$(SolutionDir)..\deps\deps/libsip/include;$(SolutionDir)..\deps\deps/yaml-cpp/include;$(SolutionDir)..\deps\deps/jsoncpp/include;$(SolutionDir)..\deps\deps/gsl/include;$(SolutionDir)..\deps\deps/fmt/include;$(SolutionDir)..\deps\deps/date/include;$(IncludePath)</IncludePath>
+    <IncludePath>..\stream_resolver;$(SolutionDir)..\deps\deps/libsip/include;$(SolutionDir)..\deps\deps/yaml-cpp/include;$(SolutionDir)..\deps\deps/jsoncpp/include;$(IncludePath)</IncludePath>
     <LibraryPath>..\lib\$(Platform)\$(Configuration)\;$(SolutionDir)..\deps\deps\libsip\lib\x64\release;$(SolutionDir)..\deps\deps\jsoncpp\lib\x64\release;$(SolutionDir)..\deps\deps\gsl\lib\x64\release;$(SolutionDir)..\deps\deps\fmt\lib\x64\release;$(SolutionDir)..\deps\deps\date\lib\x64\release;$(SolutionDir)..\deps\deps\cpp-infra\lib\x64\release;$(SolutionDir)..\deps\deps\yaml-cpp\lib\x64\release;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -128,7 +128,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>stream_resolver.lib;Dnsapi.lib;Qwave.lib;delayimp.lib;ws2_32.lib;infra.lib;date-tz.lib;fmtd.lib;jsoncpp.lib;eXosip.lib;libcares.lib;osip2.lib;osipparser2.lib;yaml-cppd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>stream_resolver.lib;Dnsapi.lib;Qwave.lib;delayimp.lib;ws2_32.lib;jsoncpp.lib;eXosip.lib;libcares.lib;osip2.lib;osipparser2.lib;yaml-cppd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -145,11 +145,71 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>stream_resolver.lib;Dnsapi.lib;Qwave.lib;delayimp.lib;ws2_32.lib;infra.lib;date-tz.lib;fmt.lib;jsoncpp.lib;eXosip.lib;libcares.lib;osip2.lib;osipparser2.lib;yaml-cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>stream_resolver.lib;Dnsapi.lib;Qwave.lib;delayimp.lib;ws2_32.lib;jsoncpp.lib;eXosip.lib;libcares.lib;osip2.lib;osipparser2.lib;yaml-cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="base_handler.cpp" />
+    <ClCompile Include="base_request.cpp" />
+    <ClCompile Include="call_handler.cpp" />
+    <ClCompile Include="common.cpp" />
+    <ClCompile Include="config_manager.cpp" />
+    <ClCompile Include="gb28181_svr_manager.cpp" />
+    <ClCompile Include="handler_manager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="media_transpond.cpp" />
+    <ClCompile Include="message_handler.cpp" />
+    <ClCompile Include="message_request.cpp" />
+    <ClCompile Include="ptz_parser.cpp" />
+    <ClCompile Include="register_handler.cpp" />
+    <ClCompile Include="request_manager.cpp" />
+    <ClCompile Include="request_sender.cpp" />
+    <ClCompile Include="sdp.cpp" />
+    <ClCompile Include="session_manager.cpp" />
+    <ClCompile Include="sip_server.cpp" />
+    <ClCompile Include="subscribe_handler.cpp" />
+    <ClCompile Include="tinyxml2.cpp" />
+    <ClCompile Include="xml_assembly.cpp" />
+    <ClCompile Include="xml_parser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base_handler.h" />
+    <ClInclude Include="base_request.h" />
+    <ClInclude Include="call_defs.h" />
+    <ClInclude Include="call_handler.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="common_defs.h" />
+    <ClInclude Include="config_manager.h" />
+    <ClInclude Include="control_defs.h" />
+    <ClInclude Include="defs.h" />
+    <ClInclude Include="gb28181_svr_manager.h" />
+    <ClInclude Include="gb_service_defs.h" />
+    <ClInclude Include="handler_manager.h" />
+    <ClInclude Include="manscdp_defs.h" />
+    <ClInclude Include="media_transpond.h" />
+    <ClInclude Include="media_transpond_defs.h" />
+    <ClInclude Include="message_handler.h" />
+    <ClInclude Include="message_request.h" />
+    <ClInclude Include="notify_defs.h" />
+    <ClInclude Include="ptz_parser.h" />
+    <ClInclude Include="query_defs.h" />
+    <ClInclude Include="rapidxml.hpp" />
+    <ClInclude Include="rapidxml_iterators.hpp" />
+    <ClInclude Include="rapidxml_print.hpp" />
+    <ClInclude Include="rapidxml_utils.hpp" />
+    <ClInclude Include="register_handler.h" />
+    <ClInclude Include="request_manager.h" />
+    <ClInclude Include="request_manager_defs.h" />
+    <ClInclude Include="request_sender.h" />
+    <ClInclude Include="safe_queue.h" />
+    <ClInclude Include="sdp.h" />
+    <ClInclude Include="session_manager.h" />
+    <ClInclude Include="sip_server.h" />
+    <ClInclude Include="subscribe_handler.h" />
+    <ClInclude Include="tinyxml2.h" />
+    <ClInclude Include="types.h" />
+    <ClInclude Include="xml_assembly.h" />
+    <ClInclude Include="xml_parser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

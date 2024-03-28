@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommandArguments> --server-ip 192.168.0.191 --server-id 44010200492000000002  --server-port 5060 --device-id 4401020049132803333  --username 3402000000  --password admin12345 --filepath D:\Work\cai\cvideo_split\csip\sip\lib\gb28181_client\samples\bigbuckbunny_1280x720_24fps_annexb_012.h264</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerCommandArguments> --server-ip 192.168.0.191 --server-id 44010200492000000002  --server-port 5060 --device-id 4401020049132803333  --username 3402000000  --password admin12345 --filepath D:\Work\cai\cvideo_split\csip\sip\lib\gb28181_client\samples\bigbuckbunny_1280x720_24fps_annexb_012.h264</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>
