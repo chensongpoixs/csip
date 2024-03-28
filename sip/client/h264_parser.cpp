@@ -184,7 +184,7 @@ int simplest_h264_parser(const char *url, void(*out_nalu)(char * buffer,int size
 		case NALU_PRIORITY_HIGH:        sprintf(idc_str, "HIGH");       break;
 		case NALU_PRIORITY_HIGHTEST:    sprintf(idc_str, "HIGHTEST");   break;
 		}
-		fprintf(myout, "%5d| %8d| %7s| %6s| %8d|\n", nal_num, data_offset, idc_str, type_str, n->len);
+		//fprintf(myout, "%5d| %8d| %7s| %6s| %8d|\n", nal_num, data_offset, idc_str, type_str, n->len);
 
 		if (out_nalu != NULL && n->nal_unit_type != NALU_TYPE_SEI) {
 			out_nalu(n->buf, data_lenth, static_cast<NaluType>(n->nal_unit_type));

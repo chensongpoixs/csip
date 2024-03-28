@@ -4,8 +4,9 @@
 #include "device.h"
 
 using namespace std;
-
-int main(int argc, const char* argv[]) {
+shared_ptr<Device> device_ptr1;
+shared_ptr<Device> device_ptr2;
+ shared_ptr<Device>   test_main(int argc, const char* argv[]) {
     cxxopts::ParseResult options_result;
 
     try {
@@ -13,12 +14,12 @@ int main(int argc, const char* argv[]) {
 
         options.add_options()
             ("h, help", "Print usage")
-            ("server-id", "specify the sip server id", cxxopts::value<std::string>())
+            ("serverid", "specify the sip server id", cxxopts::value<std::string>())
             ("server-ip", "specify the sip server ip address", cxxopts::value<std::string>())
             ("server-port", "specify the sip server port", cxxopts::value<int>())
             ("device-id", "specify the gb28181 device id", cxxopts::value<std::string>())
             ("device-port", "specify the gb28181 device port", cxxopts::value<int>())
-            ("channel-id", "specify the channel id", cxxopts::value<std::string>())
+            ("channel_id", "specify the channel id", cxxopts::value<std::string>())
             ("username", "specify the gb28181 device username", cxxopts::value<std::string>())
             ("password", "specify the gb28181 device password", cxxopts::value<std::string>())
             ("manufacture", "specify the manufacture of the gb28181 device", cxxopts::value<std::string>())
@@ -40,11 +41,11 @@ int main(int argc, const char* argv[]) {
     }
 
     string server_id;
-    if (!options_result.count("server-id")) {
+    if (!options_result.count("serverid")) {
         server_id = "31011500002000000001";
     }
     else {
-        server_id = options_result["server-id"].as<string>();
+        server_id = options_result["serverid"].as<string>();
     }
 
     string server_ip;
@@ -129,10 +130,75 @@ int main(int argc, const char* argv[]) {
     spdlog::info("sample file path: {}", filepath);
     spdlog::info("");
 
-    auto device = shared_ptr<Device>(
+    shared_ptr<Device> device = shared_ptr<Device>(
         new Device(server_id, server_ip, server_port,
             device_id, channel_id, username, password, device_port, manufacture,
             filepath)
         );
-    device->start();
+   // device->start();
+   // return EXIT_SUCCESS;
+     return device;
+    // device->start();
+}
+
+
+int main(int argcww, char* argvww[])
+{
+    
+        //  --server-ip 192.168.0.191 --server-id 44010200492000000002  --server-port 5060 --device-id 4401020049132803333  --username 3402000000  --password admin12345 --filepath D:\Work\cai\cvideo_split\csip\sip\lib\gb28181_client\samples\bigbuckbunny_1280x720_24fps_annexb_012.h264
+        int argc1 = 18;
+        const char* argv1[] = { 
+            "", "",
+ "--serverid",
+ "44010200492000000003",
+ "--server-ip",
+            "192.168.0.191",
+ "--server-port",
+ "5060",
+ "--device-id",
+ "4401020049132803333",
+ "--channel_id",
+ "23233333", 
+ "--device-port",
+ "40001",
+ "--password",
+ "admin12345",
+ "--filepath",
+ "D:/Work/cai/cvideo_split/csip/sip/lib/gb28181_client/samples/bigbuckbunny_1280x720_24fps_annexb_012.h264" };
+         device_ptr1 =  test_main(argc1, argv1); 
+         
+        int argc2 = 18;
+        const char* argv2[] = {
+             "", "",
+ "--serverid",
+ "44010200492000000004",
+ "--server-ip",
+ "192.168.0.191",
+ "--server-port",
+ "5060",
+ "--device-id",
+ "4401020049132803338",
+ "--channel_id",
+ "23233334",
+ "--device-port",
+ "40002",
+ "--password",
+ "admin12345",
+ "--filepath",
+ "D:/Work/cai/cvideo_split/csip/sip/lib/gb28181_client/samples/bigbuckbunny_1280x720_24fps_annexb_012.h264" };
+         device_ptr2 =   test_main(argc2, argv2);
+
+
+        std::thread([=] {
+            device_ptr1->start();
+            }).detach(); 
+             std::thread([=]() {
+                device_ptr2->start();
+                }).detach(); 
+            while (1)
+            {
+                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            }
+             
+    return 0;
 }
